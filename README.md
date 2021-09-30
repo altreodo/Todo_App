@@ -16,5 +16,5 @@
 <p align="center">
     <span>Other Checklists:</span>
     <br>
-  <a href="https://github.com/altreodo/Dog_Gallery"> 🐶 Dog images gallary</a> • <a href="https://github.com/altreodo/Project_form">📝 Project Form(only front end) </a>
+  <a href="https://github.com/altreodo/Dog_Gallery"> 🐶 Dog images gallary</a> • <a href="https://github.com/altreodo/Simple_Pingpong-_game">🎮 Pingpong game </a>
 </p>
