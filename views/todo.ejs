@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TODO</title>
+    <script src="https://kit.fontawesome.com/5fd9d2c403.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/css/todo.css">
+</head>
+<body>
+    <div id="main">
+        <h1 style="text-align: center;">TODO APP</h1>
+        <form action="/data" method="POST">
+        <div id="dis">
+            <p id="m">Description</p>
+            <input id="det"type="text" required name="det" placeholder="What you want to do?">
+        </div>
+        <div id="catd">
+            <div id="cat">
+                <p id="m">Category</p><br>
+                <select class="ty1" id="type" required name="cat">
+                    <option class="ty1"value="Personel">Personel</option>
+                    <option class="ty2" value="Work">Work</option>
+                    <option class="ty3" value="School">School</option>
+                    <option class="ty4" value="Home">Home</option>
+                    <option class="ty5" value="Others">Others</option>
+                  </select>
+            </div>
+            <div id="date">
+                <p id="m">Due date</p>
+                <input id="da" type="date" required name="date" value="dd/mm/yyyy">
+            </div>
+        </div>
+        <div id="button">
+            <button class="op" onclick="pol()" id="mc"  type="submit">Add Task</button>
+        </form>
+        <a  href="/delete-data"><button class="op" id="cm" type="button" value="Delete Task">Delete task</button></a>
+        </div>
+        <% for(let i of Data_list){  %>
+    <div class="list">
+           <input id="check"  onchange="window.location.href='/add/?id=<%=i._id%>'" required name="check" class="lop"  type="checkbox">
+            <div class="content">
+                <p id="vm"><%=i.discription%></p>
+                <p id="d"><%=i.date%></p>
+            </div>
+            <button class="colre" id="ic" type="submit" style="background-color:<%=i.color %>;"><%=i.category%></button>
+    </div>
+    <%  }%>
+</div>
+<script src="/js/script.js"></script>
+</body>
+</html>
